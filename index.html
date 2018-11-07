@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+</head>
+
+<body>
+  <!-- list of line properties -->
+  <section id="menu">
+    <ul class="toolbar-list">
+
+      <!-- Type size of the line -->
+      <li class="list-size">
+        <label>Size </label>
+        <br>
+        <input type="number" class="line-size" min="1" max="100" placeholder="from 1 to 100">
+      </li>
+
+
+      <!-- Turn of auto increasing and decrasing size of line-->
+      <li class="list-resize">
+        <input type="checkbox" class="cbx" id="resize" style="display: none;" checked>
+        <label for="resize" class="check"> Autochange size <br>
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+        </label>
+      </li>
+
+      <!-- Type color field -->
+      <li class="list-color">
+        <label>Color (hue values)</label>
+        <br>
+        <input type="number" class="line-color" min="0" max="360" placeholder="from 0 to 360">
+      </li>
+
+      <!-- Turn off/on auto-changing color -->
+      <li class="list-color-change">
+        <input type="checkbox" class="cbx" id="color-change" style="display: none;" checked>
+        <label for="color-change" class="check"> Auto color change <br>
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+        </label>
+      </li>
+
+
+      <!-- Turn off/on shadow -->
+      <li class="list-shadow">
+        <input type="checkbox" class="cbx" id="shadow" style="display: none;">
+        <label for="shadow" class="check"> Shadow <br>
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+        </label>
+      </li>
+
+      <!-- Select line shape -->
+      <li class="line-shape">
+        <label>Line shape</label>
+        <br>
+        <div class="styled-select">
+          <select name="shape" id="shape">
+            <option value="round">round</option>
+            <option value="butt">butt</option>
+            <option value="square">square</option>
+          </select>
+        </div>
+      </li>
+
+
+      <!-- Select line effect-->
+      <li class="line-effects">
+        <label>Canvas effects</label>
+        <br>
+        <div class="styled-select yellow rounded">
+          <select name="effects" id="effects">
+            <option value="none">none</option>
+            <option value="hue">hue</option>
+            <option value="difference">difference</option>
+            <option value="color-burn">color-burn</option>
+            <option value="xor">xor</option>
+            <option value="copy">copy</option>
+            <option value="luminosity">luminosity</option>
+            <option value="saturation">saturation</option>
+          </select>
+        </div>
+      </li>
+
+      <!-- Clear button -->
+      <li class="list-clear">
+          <button class="clear">Clear</button>
+      </li>
+    </ul>
+  </section>
+
+  <!-- drawing field-->
+  <canvas id="draw" width="2000" height="2000"></canvas>
+
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
